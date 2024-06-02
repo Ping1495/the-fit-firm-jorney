@@ -9,7 +9,51 @@ function BMI() {
   const [bestMinWeight, setBestMinWeight] = useState("");
   const [bestMaxWeight, setBestMaxWeight] = useState("");
 
+  //validate height input
+  const validateHeightInput = () => {
+    if (height === "") {
+      alert("Height is required");
+      return false;
+    }
+
+    const heightNumber = Number(height);
+
+    if (isNaN(heightNumber) || heightNumber <= 0) {
+      alert("Please enter a valid number for height");
+      return false;
+    }
+
+    return true;
+  };
+
+  //validate weight input
+  const validateWeightInput = () => {
+    if (weight === "") {
+      alert("weight is required");
+      return false;
+    }
+
+    const weightNumber = Number(weight);
+
+    if (isNaN(weightNumber) || weightNumber <= 0) {
+      alert("Please enter a valid number for weight");
+      return false;
+    }
+
+    return true;
+  };
+
   const calculateBMI = () => {
+    //check validate height input
+    if (!validateHeightInput()) {
+      return;
+    }
+
+    //check validate weight input
+    if (!validateWeightInput()) {
+      return;
+    }
+
     //bmi calculate
     const heightInMeters = height / 100;
     const bmiValue = (weight / (heightInMeters * heightInMeters)).toFixed(2);
@@ -95,7 +139,8 @@ function BMI() {
 
             <div>
               <p className="text-[#0A3288] text-center">
-                You are a {message} <br /> Your best weight is {bestMinWeight}-
+                You are a {message} <br /> Your best weight is {bestMinWeight}
+                &nbsp;-&nbsp;
                 {bestMaxWeight} kg
               </p>
             </div>
