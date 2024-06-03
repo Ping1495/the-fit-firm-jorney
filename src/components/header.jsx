@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import dumbbellPic from "/public/dumbbell.png";
+import dumbbellPic from "/public/images/dumbbell.png";
 
 function Header() {
   return (

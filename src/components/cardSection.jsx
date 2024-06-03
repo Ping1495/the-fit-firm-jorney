@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import bmiPic from "/public/bmi.png";
+import bmiPic from "/public/images/bmi.png";
 
 function CardSection() {
   return (

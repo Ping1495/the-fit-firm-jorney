@@ -1,4 +1,4 @@
-import lifestyles from "/public/lifestyles.png";
+import lifestyles from "/public/images/lifestyles.png";
 
 function WelcomeSection() {
   return (
