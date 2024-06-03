@@ -55,7 +55,7 @@ function CardSection() {
             />
             <div class="px-6 py-4">
               <div class="font-bold text-xl mb-2 text-[#0A3288]">
-                Water Calculate
+                Water Calculation
               </div>
               <p class="text-gray-700 w-[250px]">
                 How Much Water Should You Drink Per Day?
@@ -70,10 +70,11 @@ function CardSection() {
               class="w-full h-48 object-contain pt-5"
             />
             <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2 text-[#0A3288]">BMI</div>
+              <div class="font-bold text-xl mb-2 text-[#0A3288]">
+                Protein Calculation
+              </div>
               <p class="text-gray-700 w-[250px]">
-                BMI is a measurement comparing body weight and height for health
-                assessment.
+                How Much Protein Should You Eat Per Day?
               </p>
             </div>
           </div>
