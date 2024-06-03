@@ -5,7 +5,7 @@ function BMI() {
   const [height, setHeight] = useState("");
   const [weight, setWeight] = useState("");
   const [bmi, setBmi] = useState("?");
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState("...");
   const [bestMinWeight, setBestMinWeight] = useState("");
   const [bestMaxWeight, setBestMaxWeight] = useState("");
 
@@ -99,6 +99,7 @@ function BMI() {
                 <input
                   value={height}
                   onChange={(e) => setHeight(e.target.value)}
+                  placeholder="159"
                   type="text"
                   id="height"
                   name="height"
@@ -115,6 +116,7 @@ function BMI() {
                 <input
                   value={weight}
                   onChange={(e) => setWeight(e.target.value)}
+                  placeholder="45"
                   type="text"
                   id="weight"
                   name="weight"

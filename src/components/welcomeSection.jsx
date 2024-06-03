@@ -1,3 +1,5 @@
+import lifestyles from "/public/lifestyles.png";
+
 function WelcomeSection() {
   return (
     <>
@@ -28,11 +30,7 @@ function WelcomeSection() {
           </button>
         </div>
         <div className="flex flex-col items-center justify-center w-6/12 h-[500px] ">
-          <img
-            src="/public/lifestyles.png"
-            alt="lifestyles-pic"
-            className="w-[350px]"
-          />
+          <img src={lifestyles} alt="lifestyles-pic" className="w-[350px]" />
         </div>
       </div>
     </>

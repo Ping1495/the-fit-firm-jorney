@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import bmiPic from "/public/bmi.png";
 
 function CardSection() {
   return (
@@ -14,7 +15,7 @@ function CardSection() {
             class="h-[400px] max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden border-8 borger-white"
           >
             <img
-              src="/public/bmi.png"
+              src={bmiPic}
               alt="Your Image"
               class="w-full h-48 object-contain pt-5"
             />
@@ -32,7 +33,7 @@ function CardSection() {
             class="h-[400px] max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden border-8 borger-white"
           >
             <img
-              src="/public/bmi.png"
+              src={bmiPic}
               alt="Your Image"
               class="w-full h-48 object-contain pt-5"
             />
@@ -48,7 +49,7 @@ function CardSection() {
 
           <div class="h-[400px] max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden border-8 borger-white">
             <img
-              src="/public/bmi.png"
+              src={bmiPic}
               alt="Your Image"
               class="w-full h-48 object-contain pt-5"
             />
@@ -64,7 +65,7 @@ function CardSection() {
 
           <div class="h-[400px] max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden border-8 borger-white">
             <img
-              src="/public/bmi.png"
+              src={bmiPic}
               alt="Your Image"
               class="w-full h-48 object-contain pt-5"
             />

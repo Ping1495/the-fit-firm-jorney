@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import dumbbellPic from "/public/dumbbell.png";
 
 function Header() {
   return (
@@ -7,7 +8,7 @@ function Header() {
         <div className=" mx-auto flex justify-between items-center">
           <div className="flex flex-row items-center space-x-4">
             <img
-              src="/public/dumbbell.png"
+              src={dumbbellPic}
               alt="health-logo"
               className="w-12 h-12 ml-5"
             />
