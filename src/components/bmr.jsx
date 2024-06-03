@@ -1,6 +1,5 @@
-import Header from "./header";
-import "./bmr.css";
 import { useState, useEffect } from "react";
+import Header from "./header";
 
 function BMR() {
   const [age, setAge] = useState("");

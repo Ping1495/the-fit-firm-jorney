@@ -1,5 +1,5 @@
+import { useState } from "react";
 import Header from "./header";
-import { useState, useEffect } from "react";
 
 function BMI() {
   const [height, setHeight] = useState("");
@@ -8,49 +8,45 @@ function BMI() {
   const [message, setMessage] = useState("...");
   const [bestMinWeight, setBestMinWeight] = useState("");
   const [bestMaxWeight, setBestMaxWeight] = useState("");
-
-  //validate height input
-  const validateHeightInput = () => {
-    if (height === "") {
-      alert("Height is required");
-      return false;
-    }
-
-    const heightNumber = Number(height);
-
-    if (isNaN(heightNumber) || heightNumber <= 0) {
-      alert("Please enter a valid number for height");
-      return false;
-    }
-
-    return true;
-  };
-
-  //validate weight input
-  const validateWeightInput = () => {
-    if (weight === "") {
-      alert("weight is required");
-      return false;
-    }
-
-    const weightNumber = Number(weight);
-
-    if (isNaN(weightNumber) || weightNumber <= 0) {
-      alert("Please enter a valid number for weight");
-      return false;
-    }
-
-    return true;
-  };
+  //const [isCalculated, setIsCalculated] = useState(false);
 
   const calculateBMI = () => {
-    //check validate height input
-    if (!validateHeightInput()) {
-      return;
-    }
+    //validate height input
+    const validateHeightInput = () => {
+      if (height === "") {
+        alert("Height is required");
+        return false;
+      }
 
-    //check validate weight input
-    if (!validateWeightInput()) {
+      const heightNumber = Number(height);
+
+      if (isNaN(heightNumber) || heightNumber <= 0) {
+        alert("Please enter a valid number for height");
+        return false;
+      }
+
+      return true;
+    };
+
+    //validate weight input
+    const validateWeightInput = () => {
+      if (weight === "") {
+        alert("weight is required");
+        return false;
+      }
+
+      const weightNumber = Number(weight);
+
+      if (isNaN(weightNumber) || weightNumber <= 0) {
+        alert("Please enter a valid number for weight");
+        return false;
+      }
+
+      return true;
+    };
+
+    //check validate inputs
+    if (!validateHeightInput() || !validateWeightInput()) {
       return;
     }
 
@@ -77,6 +73,9 @@ function BMI() {
     //max
     const maxWeight = (24.9 * (heightInMeters * heightInMeters)).toFixed(2);
     setBestMaxWeight(maxWeight);
+
+    // Update state to true after calculation
+    //setIsCalculated(true);
   };
 
   return (
