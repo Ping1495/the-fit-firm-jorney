@@ -63,7 +63,10 @@ function CardSection() {
             </div>
           </div>
 
-          <div class="h-[400px] max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden border-8 borger-white">
+          <Link
+            to={`/ProtineCalculate`}
+            class="h-[400px] max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden border-8 borger-white"
+          >
             <img
               src={bmiPic}
               alt="Your Image"
@@ -77,7 +80,7 @@ function CardSection() {
                 How Much Protein Should You Eat Per Day?
               </p>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </>

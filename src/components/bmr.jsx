@@ -6,11 +6,28 @@ function BMR() {
   const [sex, setSex] = useState("");
   const [height, setHeight] = useState("");
   const [weight, setWeight] = useState("");
-  const [activity, setActivity] = useState("");
-  const [bmi, setBmi] = useState("?");
-  const [message, setMessage] = useState("...");
-  const [bestMinWeight, setBestMinWeight] = useState("");
-  const [bestMaxWeight, setBestMaxWeight] = useState("");
+  const [activityLevel, setActivityLevel] = useState("");
+  const [tdee, setTdee] = useState("");
+  const [bmr, setBmr] = useState("...");
+
+  const bmrTdeeCalculate = () => {
+    //find bmr
+    let bmrValue = 0;
+    if (sex === "male") {
+      bmrValue = (10 * weight + 6.25 * height - 5 * age + 5).toFixed(0);
+    } else if (sex === "female") {
+      bmrValue = 10 * weight + 6.25 * height - 5 * age - 161;
+    }
+    setBmr(bmrValue);
+
+    //find tdee
+
+    let tdeeValue = 0;
+  };
+
+  const handleCalculate = () => {
+    bmrTdeeCalculate();
+  };
 
   return (
     <>
@@ -56,6 +73,7 @@ function BMR() {
                 </label>
                 <input
                   value={age}
+                  onChange={(e) => setAge(e.target.value)}
                   placeholder="26"
                   type="text"
                   id="age"
@@ -73,6 +91,7 @@ function BMR() {
                 </label>
                 <input
                   value={height}
+                  onChange={(e) => setHeight(e.target.value)}
                   placeholder="159"
                   type="text"
                   id="height"
@@ -89,6 +108,7 @@ function BMR() {
                 </label>
                 <input
                   value={weight}
+                  onChange={(e) => setWeight(e.target.value)}
                   placeholder="45"
                   type="text"
                   id="weight"
@@ -104,17 +124,17 @@ function BMR() {
               BMR CALCULATOR
             </p>
             <form>
-              <div className="block text-lg font-normal text-[#0A3288] mb-2 mt-7">
+              <div className="block text-lg font-normal text-[#0A3288] mb-2 mt-4">
                 <p className="block text-lg font-normal text-[#0A3288] mb-2 mt-4">
                   Activity
                 </p>
                 <label className="">
                   <input
                     type="radio"
-                    name="activity"
-                    value="little"
-                    checked={activity === "little"}
-                    onChange={(e) => setActivity(e.target.value)}
+                    name="activityLevel"
+                    value="1"
+                    checked={activityLevel === "1"}
+                    onChange={(e) => setActivityLevel(e.target.value)}
                   />
                   &nbsp;&nbsp;Little or no exercise
                 </label>
@@ -122,10 +142,10 @@ function BMR() {
                 <label className="">
                   <input
                     type="radio"
-                    name="activity"
-                    value="light"
-                    checked={activity === "light"}
-                    onChange={(e) => setActivity(e.target.value)}
+                    name="activityLevel"
+                    value="2"
+                    checked={activityLevel === "2"}
+                    onChange={(e) => setActivityLevel(e.target.value)}
                   />
                   &nbsp;&nbsp;Light exercise 1-3 times per week
                 </label>
@@ -133,10 +153,10 @@ function BMR() {
                 <label className="">
                   <input
                     type="radio"
-                    name="activity"
-                    value="moderate"
-                    checked={activity === "moderate"}
-                    onChange={(e) => setActivity(e.target.value)}
+                    name="activityLevel"
+                    value="3"
+                    checked={activityLevel === "3"}
+                    onChange={(e) => setActivityLevel(e.target.value)}
                   />
                   &nbsp;&nbsp;Moderate exercise 4-5 times per week
                 </label>
@@ -145,10 +165,10 @@ function BMR() {
                 <label className="">
                   <input
                     type="radio"
-                    name="activity"
-                    value="Intense"
-                    checked={activity === "Intense"}
-                    onChange={(e) => setActivity(e.target.value)}
+                    name="activityLevel"
+                    value="4"
+                    checked={activityLevel === "4"}
+                    onChange={(e) => setActivityLevel(e.target.value)}
                   />
                   &nbsp;&nbsp;Intense exercise 6-7 times per week
                 </label>
@@ -156,10 +176,10 @@ function BMR() {
                 <label className="">
                   <input
                     type="radio"
-                    name="activity"
-                    value="sportsperson"
-                    checked={activity === "sportsperson"}
-                    onChange={(e) => setActivity(e.target.value)}
+                    name="activityLevel"
+                    value="5"
+                    checked={activityLevel === "5"}
+                    onChange={(e) => setActivityLevel(e.target.value)}
                   />
                   &nbsp;&nbsp;Very intense exercise daily, or physical job
                 </label>
@@ -167,9 +187,30 @@ function BMR() {
               </div>
             </form>
             <div>
-              <button className="w-[250px] bg-[#0A3288] text-white text-[20px] font-semibold border border-white py-2 px-6 rounded-xl mb-[20px] mt-[15px]">
-                calculate your BMR
+              <button
+                className="w-[250px] bg-[#0A3288] text-white text-[20px] font-semibold border border-white py-2 px-4 rounded-xl mb-[10px] mt-[8px]"
+                onClick={handleCalculate}
+              >
+                calculate your Calories
               </button>
+            </div>
+            <div className=" text-base font-semibold text-[#0A3288] mt-2 border-b-2 border-[#0A3288] pb-2">
+              <span>Your BMR is&nbsp;{bmr}&nbsp; Calories per day</span>
+            </div>
+            <div className="flex flex-col justify-center items-center  text-lg font-semibold text-[#0A3288]">
+              <p className="text-xl font-midium mt-2">
+                Daily calories with activity:
+              </p>
+              <p className="w-[80px] h-[50px] text-3xl font-semibold  py-1 px-1 mt-4 border-2 border-blue-500 rounded-xl ">
+                {tdee}
+              </p>
+            </div>
+
+            <div className=" text-base font-semibold text-[#0A3288] mt-1">
+              <p className="text-xs mt-5">
+                *BMR is the number of calories your body needs to function at
+                rest.
+              </p>
             </div>
           </div>
         </div>

@@ -4,10 +4,10 @@ import Header from "./header";
 function BMI() {
   const [height, setHeight] = useState("");
   const [weight, setWeight] = useState("");
-  const [bmi, setBmi] = useState("?");
-  const [message, setMessage] = useState("...");
-  const [bestMinWeight, setBestMinWeight] = useState("");
-  const [bestMaxWeight, setBestMaxWeight] = useState("");
+  const [bmi, setBmi] = useState("00.00");
+  const [message, setMessage] = useState("Normal weight");
+  const [bestMinWeight, setBestMinWeight] = useState("00.00");
+  const [bestMaxWeight, setBestMaxWeight] = useState("00.00");
   //const [isCalculated, setIsCalculated] = useState(false);
 
   const calculateBMI = () => {
