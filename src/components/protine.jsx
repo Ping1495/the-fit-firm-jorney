@@ -11,7 +11,7 @@ const ProtineCalculate = () => {
 
   //calculate protine
   //min
-  const minCalculate = () => {
+  const calculate = () => {
     if (goal === "healthy") {
       setMinProtine((weight * 0.8).toFixed(2));
       setMaxProtine((weight * 1).toFixed(2));
@@ -37,7 +37,7 @@ const ProtineCalculate = () => {
   };
 
   const handleCalculate = () => {
-    minCalculate();
+    calculate();
   };
 
   return (
@@ -116,7 +116,7 @@ const ProtineCalculate = () => {
             <div className="text-[#0A3288] mb-[15px] flex flex-col justify-center items-center">
               <p className="text-xl font-midium ">You need protein</p>
               <div className="text-[#0A3288]  flex flex-rol justify-center items-center">
-                <p className="text-[20px] font-semibold  py-1 px-1 mt-3 border-2 border-blue-500 rounded-xl w-[160px] h-[40px] text-center ml-[20px]">
+                <p className="text-[20px] font-semibold  py-1 px-1 mt-3 border-2 border-blue-500 rounded-xl w-[160px] h-[40px] text-center ml-[25px]">
                   {minProtine} {hyphen} {maxProtine}
                 </p>
                 <p className="text-[20px] font-normal ">&nbsp;&nbsp;g.</p>

@@ -47,7 +47,10 @@ function CardSection() {
             </div>
           </Link>
 
-          <div class="h-[400px] max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden border-8 borger-white">
+          <Link
+            to={`/WaterCalculate`}
+            class="h-[400px] max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden border-8 borger-white"
+          >
             <img
               src={bmiPic}
               alt="Your Image"
@@ -61,7 +64,7 @@ function CardSection() {
                 How Much Water Should You Drink Per Day?
               </p>
             </div>
-          </div>
+          </Link>
 
           <Link
             to={`/ProtineCalculate`}

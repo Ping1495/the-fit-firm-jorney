@@ -9,6 +9,7 @@ import BMI from "./components/bmi.jsx";
 import BMR from "./components/bmr.jsx";
 import ComingSoon from "./components/comingSoon.jsx";
 import ProtineCalculate from "./components/protine.jsx";
+import WaterCalculate from "./components/water.jsx";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
   {
     path: "/ProtineCalculate",
     element: <ProtineCalculate />,
+  },
+  {
+    path: "/WaterCalculate",
+    element: <WaterCalculate />,
   },
   {
     path: "/comingSoon",
