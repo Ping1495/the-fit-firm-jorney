@@ -8,43 +8,41 @@ function BMI() {
   const [message, setMessage] = useState("Normal weight");
   const [bestMinWeight, setBestMinWeight] = useState("00.00");
   const [bestMaxWeight, setBestMaxWeight] = useState("00.00");
-  //const [isCalculated, setIsCalculated] = useState(false);
 
+  //validate height input
+  const validateHeightInput = () => {
+    if (height === "") {
+      alert("Height is required");
+      return false;
+    }
+
+    const heightNumber = Number(height);
+
+    if (isNaN(heightNumber) || heightNumber <= 0) {
+      alert("Please enter a valid number for height");
+      return false;
+    }
+
+    return true;
+  };
+
+  //validate weight input
+  const validateWeightInput = () => {
+    if (weight === "") {
+      alert("weight is required");
+      return false;
+    }
+
+    const weightNumber = Number(weight);
+
+    if (isNaN(weightNumber) || weightNumber <= 0) {
+      alert("Please enter a valid number for weight");
+      return false;
+    }
+
+    return true;
+  };
   const calculateBMI = () => {
-    //validate height input
-    const validateHeightInput = () => {
-      if (height === "") {
-        alert("Height is required");
-        return false;
-      }
-
-      const heightNumber = Number(height);
-
-      if (isNaN(heightNumber) || heightNumber <= 0) {
-        alert("Please enter a valid number for height");
-        return false;
-      }
-
-      return true;
-    };
-
-    //validate weight input
-    const validateWeightInput = () => {
-      if (weight === "") {
-        alert("weight is required");
-        return false;
-      }
-
-      const weightNumber = Number(weight);
-
-      if (isNaN(weightNumber) || weightNumber <= 0) {
-        alert("Please enter a valid number for weight");
-        return false;
-      }
-
-      return true;
-    };
-
     //check validate inputs
     if (!validateHeightInput() || !validateWeightInput()) {
       return;
@@ -62,7 +60,7 @@ function BMI() {
       setMessage("Normal weight");
     } else if (bmiValue >= 25 && bmiValue <= 29.99) {
       setMessage("Overweight");
-    } else {
+    } else if (bmiValue >= 30) {
       setMessage("Obese");
     }
 
@@ -73,9 +71,10 @@ function BMI() {
     //max
     const maxWeight = (24.9 * (heightInMeters * heightInMeters)).toFixed(2);
     setBestMaxWeight(maxWeight);
+  };
 
-    // Update state to true after calculation
-    //setIsCalculated(true);
+  const handleCalculate = () => {
+    calculateBMI();
   };
 
   return (
@@ -126,7 +125,7 @@ function BMI() {
             <div>
               <button
                 className="w-[250px] bg-[#0A3288] text-white text-[20px] font-semibold border border-white py-2 px-6 rounded-xl mb-[20px] mt-[30px]"
-                onClick={calculateBMI}
+                onClick={handleCalculate}
               >
                 calculate your BMI
               </button>
