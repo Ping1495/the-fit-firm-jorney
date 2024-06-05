@@ -1,4 +1,5 @@
 import Header from "./header";
+import { Link } from "react-router-dom";
 
 function SingUp() {
   return (
@@ -68,12 +69,12 @@ function SingUp() {
                 />
               </div>
 
-              <button
-                type="submit"
-                class="mt-[35px] ml-[400px] py-2 px-4 bg-[#0A3288] text-white font-bold rounded w-[100px]"
+              <Link
+                to={"/comingSoon"}
+                class="mt-[35px] ml-[400px] py-2 px-4 bg-[#0A3288] text-white font-bold rounded w-[100px] text-center"
               >
                 Sing Up
-              </button>
+              </Link>
             </form>
           </div>
         </div>

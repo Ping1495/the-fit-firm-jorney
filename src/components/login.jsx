@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Header from "./header";
 
 function Login() {
@@ -40,12 +41,12 @@ function Login() {
                 />
               </div>
 
-              <button
-                type="submit"
-                class="mt-[50px] ml-[400px] py-2 px-4 bg-[#0A3288] text-white font-bold rounded w-[100px]"
+              <Link
+                to={"/comingSoon"}
+                class="mt-[50px] ml-[400px] py-2 px-4 bg-[#0A3288] text-white font-bold rounded w-[100px] text-center"
               >
                 Login
-              </button>
+              </Link>
             </form>
           </div>
         </div>

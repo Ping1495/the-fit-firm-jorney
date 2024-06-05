@@ -48,7 +48,7 @@ function BMR() {
         <div className="flex justify-center mt-[50px] font-semibold">
           <div className="bg-white h-[550px] w-[450px] rounded-3xl flex flex-col items-center">
             <p className="text-3xl font-midium bg-[#0A3288] py-[20px] w-[450px] text-white text-center rounded-t-3xl">
-              BMR CALCULATOR
+              BMR & TDEE
             </p>
             <form>
               <div className="block text-lg font-normal text-[#0A3288] mb-2 mt-7">
@@ -133,7 +133,7 @@ function BMR() {
 
           <div className="bg-white h-[550px] w-[450px] rounded-3xl flex flex-col items-center ml-7">
             <p className="text-3xl font-midium bg-[#0A3288] py-[20px] w-[450px] text-white text-center rounded-t-3xl">
-              BMR CALCULATOR
+              CALCULATOR
             </p>
             <form>
               <div className="block text-lg font-normal text-[#0A3288] mb-2 mt-4">

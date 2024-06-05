@@ -7,7 +7,7 @@ import Login from "./components/login.jsx";
 import SingUp from "./components/singUp.jsx";
 import BMI from "./components/bmi.jsx";
 import BMR from "./components/bmr.jsx";
-import BMR_TDEE_Calculator from "./components/bmrMoc.jsx";
+import ComingSoon from "./components/comingSoon.jsx";
 import ProtineCalculate from "./components/protine.jsx";
 
 const router = createBrowserRouter([
@@ -32,12 +32,12 @@ const router = createBrowserRouter([
     element: <BMR />,
   },
   {
-    path: "/bmrMoc",
-    element: <BMR_TDEE_Calculator />,
-  },
-  {
     path: "/ProtineCalculate",
     element: <ProtineCalculate />,
+  },
+  {
+    path: "/comingSoon",
+    element: <ComingSoon />,
   },
 ]);
 
