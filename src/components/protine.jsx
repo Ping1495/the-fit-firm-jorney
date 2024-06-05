@@ -12,28 +12,30 @@ const ProtineCalculate = () => {
   //calculate protine
   //min
   const calculate = () => {
+    let minValue = 0;
+    let maxValue = 0;
+    let thatMessage = "";
     if (goal === "healthy") {
-      setMinProtine((weight * 0.8).toFixed(2));
-      setMaxProtine((weight * 1).toFixed(2));
-      setMessage(
-        "Not just muscles! Protein helps you feel full, boosts immunity, strengthens skin, hair & nails, and improves brain function! Make sure you get enough!"
-      );
-      setHyphen("-");
+      minValue = weight * 0.8;
+      maxValue = weight * 1;
+      thatMessage =
+        "Not just muscles! Protein helps you feel full, boosts immunity, strengthens skin, hair & nails, and improves brain function! Make sure you get enough!";
     } else if (goal === "loseWeight") {
-      setMinProtine((weight * 1.2).toFixed(2));
-      setMaxProtine((weight * 1.5).toFixed(2));
-      setMessage(
-        "Protein takes longer to digest than carbs and fats, making you feel full for longer. This curbs cravings and helps burn more calories throughout the day."
-      );
-      setHyphen("-");
+      minValue = weight * 1.2;
+      maxValue = weight * 1.5;
+      thatMessage =
+        "Protein takes longer to digest than carbs and fats, making you feel full for longer. This curbs cravings and helps burn more calories throughout the day.";
     } else if (goal === "gainMuscleMass") {
-      setMinProtine((weight * 1.6).toFixed(2));
-      setMaxProtine((weight * 2.2).toFixed(2));
-      setMessage(
-        "Muscle growth needs protein! It's like bricks for your body, repairing damage and building bigger, stronger muscles for future workouts."
-      );
-      setHyphen("-");
+      minValue = weight * 1.6;
+      maxValue = weight * 2.2;
+      thatMessage =
+        "Muscle growth needs protein! It's like bricks for your body, repairing damage and building bigger, stronger muscles for future workouts.";
     }
+
+    setMinProtine(minValue.toFixed(2));
+    setMaxProtine(maxValue.toFixed(2));
+    setMessage(thatMessage);
+    setHyphen("-");
   };
 
   const handleCalculate = () => {
