@@ -14,15 +14,27 @@ function BMR() {
     //find bmr
     let bmrValue = 0;
     if (sex === "male") {
-      bmrValue = (10 * weight + 6.25 * height - 5 * age + 5).toFixed(0);
+      bmrValue = 10 * weight + 6.25 * height - 5 * age + 5;
     } else if (sex === "female") {
       bmrValue = 10 * weight + 6.25 * height - 5 * age - 161;
     }
-    setBmr(bmrValue);
+    setBmr(bmrValue.toFixed(0));
 
     //find tdee
 
     let tdeeValue = 0;
+    if (activityLevel === "1") {
+      tdeeValue = bmrValue * 1.2;
+    } else if (activityLevel === "2") {
+      tdeeValue = bmrValue * 1.375;
+    } else if (activityLevel === "3") {
+      tdeeValue = bmrValue * 1.55;
+    } else if (activityLevel === "4") {
+      tdeeValue = bmrValue * 1.725;
+    } else if (activityLevel === "5") {
+      tdeeValue = bmrValue * 1.9;
+    }
+    setTdee(tdeeValue.toFixed(0));
   };
 
   const handleCalculate = () => {
@@ -199,9 +211,9 @@ function BMR() {
             </div>
             <div className="flex flex-col justify-center items-center  text-lg font-semibold text-[#0A3288]">
               <p className="text-xl font-midium mt-2">
-                Daily calories with activity:
+                Daily calories with activity (TDEE):
               </p>
-              <p className="w-[80px] h-[50px] text-3xl font-semibold  py-1 px-1 mt-4 border-2 border-blue-500 rounded-xl ">
+              <p className="w-[80px] h-[50px] text-3xl font-semibold  py-1 px-1 mt-4 border-2 border-blue-500 rounded-xl text-center">
                 {tdee}
               </p>
             </div>
@@ -210,6 +222,10 @@ function BMR() {
               <p className="text-xs mt-5">
                 *BMR is the number of calories your body needs to function at
                 rest.
+              </p>
+              <p className="text-xs ">
+                *TDEE is the number of calories needed daily to maintain your
+                weight.
               </p>
             </div>
           </div>
