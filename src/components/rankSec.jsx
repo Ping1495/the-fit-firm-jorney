@@ -1,94 +1,47 @@
-//ส่วน
 import { Link } from "react-router-dom";
-import bmiPic from "/public/images/bmi.png";
+import RankPic from "/public/images/rank.png";
 
-function CardSection() {
+/*dietChallenge = No Sugar Challenge/ Intermittent Fasting 16/8 Challenge /Plant-Based Eating Challenge/Hydration Challenge /
+Mindful Eating Challenge /No Processed Foods Challenge/Low Carb Challenge / Meal Prep Challenge/ Lean Protein Challenge /Fiber-Rich Diet Challenge*/
+
+/*workout challenhe =  */
+
+function RankSec() {
   return (
     <>
-      <div className="h-[600px]  bg-white ">
-        <h1 className="text-white text-3xl py-[50px]  text-center">
-          Body Check
-        </h1>
-
-        <div className="flex flex-roe items-center justify-around ">
-          <Link
-            to={`/bmi`}
-            class="h-[400px] max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden border-8 borger-white"
+      <div className="bg-blue-300 h-[600px]">
+        <div className="flex flex-row justify-evenly items-center font-semibold ">
+          <div
+            className="bg-[#0A3288] h-[480px] w-[600px] rounded-3xl 
+           mt-[60px]"
           >
-            <img
-              src={bmiPic}
-              alt="Your Image"
-              class="w-full h-48 object-contain pt-5"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2 text-[#0A3288]">BMI</div>
-              <p class="text-gray-700 w-[250px]">
-                BMI is a measurement comparing body weight and height for health
-                assessment.
+            <div className="flex flex-col  items-center h-[480px]">
+              <p className="w-[600px] bg-yellow-400 text-[#0A3288] px-1 py-5 text-center mb-9 rounded-t-3xl font-bold text-4xl">
+                Randomize your Challenge
               </p>
-            </div>
-          </Link>
-
-          <Link
-            to={`/bmr`}
-            class="h-[400px] max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden border-8 borger-white"
-          >
-            <img
-              src={bmiPic}
-              alt="Your Image"
-              class="w-full h-48 object-contain pt-5"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2 text-[#0A3288]">BMR</div>
-              <p class="text-gray-700 w-[250px]">
-                basal metabolic rate (BMR) is the number of calories your body
-                needs to accomplish its most basic (basal) life-sustaining
-                functions.
-              </p>
-            </div>
-          </Link>
-
-          <Link
-            to={`/WaterCalculate`}
-            class="h-[400px] max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden border-8 borger-white"
-          >
-            <img
-              src={bmiPic}
-              alt="Your Image"
-              class="w-full h-48 object-contain pt-5"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2 text-[#0A3288]">
-                Water Calculation
+              <img
+                src={RankPic}
+                alt=""
+                className="w-[250px] h-[250px] bg-[#0A3288] mb-9"
+              />
+              <div className="w-[600px] flex flex-row items-end  justify-evenly">
+                <p className="w-[150px] mb-[5px]  bg-yellow-400 text-[#0A3288] rounded-full px-1 py-1 font-semibold text-[24px] text-center">
+                  Workout
+                </p>
+                <p className="w-[150px] mb-[5px] bg-yellow-400 text-[#0A3288]   rounded-full px-1 py-1 font-semibold  text-[24px] text-center">
+                  Diet
+                </p>
+                <p className="w-[150px] mb-[5px] bg-yellow-400 text-[#0A3288]  rounded-full px-1 py-1 font-semibold  text-[24px] text-center">
+                  Lifestyle
+                </p>
               </div>
-              <p class="text-gray-700 w-[250px]">
-                How Much Water Should You Drink Per Day?
-              </p>
             </div>
-          </Link>
-
-          <Link
-            to={`/ProtineCalculate`}
-            class="h-[400px] max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden border-8 borger-white"
-          >
-            <img
-              src={bmiPic}
-              alt="Your Image"
-              class="w-full h-48 object-contain pt-5"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2 text-[#0A3288]">
-                Protein Calculation
-              </div>
-              <p class="text-gray-700 w-[250px]">
-                How Much Protein Should You Eat Per Day?
-              </p>
-            </div>
-          </Link>
+          </div>
+          <div className="bg-[#0A3288] h-[480px] w-[700px] rounded-3xl flex flex-col items-center mt-[60px]"></div>
         </div>
       </div>
     </>
   );
 }
 
-export default CardSection;
+export default RankSec;

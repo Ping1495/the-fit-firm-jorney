@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
 import bmiPic from "/public/images/bmi.png";
+import waterPic from "/public/images/water.jpg";
+import meatPic from "/public/images/meat.jpg";
+import noodlePic from "/public/images/noodle.jpg";
 
 function CardSection() {
   return (
@@ -33,7 +36,7 @@ function CardSection() {
             class="h-[400px] max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden border-8 borger-white"
           >
             <img
-              src={bmiPic}
+              src={noodlePic}
               alt="Your Image"
               class="w-full h-48 object-contain pt-5"
             />
@@ -52,7 +55,7 @@ function CardSection() {
             class="h-[400px] max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden border-8 borger-white"
           >
             <img
-              src={bmiPic}
+              src={waterPic}
               alt="Your Image"
               class="w-full h-48 object-contain pt-5"
             />
@@ -71,7 +74,7 @@ function CardSection() {
             class="h-[400px] max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden border-8 borger-white"
           >
             <img
-              src={bmiPic}
+              src={meatPic}
               alt="Your Image"
               class="w-full h-48 object-contain pt-5"
             />
