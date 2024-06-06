@@ -49,7 +49,7 @@ const ProtineCalculate = () => {
         <div className="flex justify-center mt-[50px] font-semibold">
           <div className="bg-white h-[550px] w-[450px] rounded-3xl flex flex-col items-center">
             <p className="text-3xl font-midium bg-[#0A3288] py-[20px] w-[450px] text-white text-center rounded-t-3xl">
-              PROTINE&nbsp;&nbsp;CALCULATOR
+              PROTEIN&nbsp;&nbsp;CALCULATOR
             </p>
             <form>
               <div>
@@ -112,7 +112,7 @@ const ProtineCalculate = () => {
                 className="w-[250px] bg-[#0A3288] text-white text-[20px] font-semibold border border-white py-2 px-6 rounded-xl mb-[10px] mt-[10px]"
                 onClick={handleCalculate}
               >
-                calculate your Protine
+                calculate your Protein
               </button>
             </div>
             <div className="text-[#0A3288] mb-[15px] flex flex-col justify-center items-center">
