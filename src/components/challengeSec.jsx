@@ -27,14 +27,8 @@ function ChallengeSec() {
                 className="w-[250px] h-[250px] bg-[#0A3288] mb-9"
               />
               <div className="w-[600px] flex flex-row items-end  justify-evenly">
-                <button className="w-[150px] mb-[5px]  bg-yellow-400 text-[#0A3288] rounded-full px-1 py-1 font-semibold text-[24px] text-center">
-                  Workout
-                </button>
-                <button className="w-[150px] mb-[5px] bg-yellow-400 text-[#0A3288]   rounded-full px-1 py-1 font-semibold  text-[24px] text-center">
-                  Diet
-                </button>
-                <button className="w-[150px] mb-[5px] bg-yellow-400 text-[#0A3288]  rounded-full px-1 py-1 font-semibold  text-[24px] text-center">
-                  Lifestyle
+                <button className="w-[250px] mb-[5px] bg-yellow-400 text-[#0A3288]   rounded-lg px-8 py-3 font-bold  text-lg text-center">
+                  Click for Challenge!
                 </button>
               </div>
             </div>
@@ -80,10 +74,10 @@ function ChallengeSec() {
                 </div>
               </div>
               <div className="mb-9 flex justify-center w-full">
-                <button className="bg-yellow-400 text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-yellow-500 transition duration-300">
+                <button className="bg-yellow-400 text-blue-900 px-8 py-3 rounded-lg text-lg font-semibold  hover:bg-yellow-500 transition duration-300">
                   Randomize
                 </button>
-                <button className="bg-yellow-400 text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-yellow-500 transition duration-300 ml-4">
+                <button className="bg-yellow-400 text-blue-900 px-8 py-3 rounded-lg text-lg font-semibold  hover:bg-yellow-500 transition duration-300 ml-4">
                   Take the Challenge
                 </button>
               </div>
