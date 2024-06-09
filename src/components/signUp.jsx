@@ -1,7 +1,7 @@
 import Header from "./header";
 import { Link } from "react-router-dom";
 
-function SingUp() {
+function SignUp() {
   return (
     <>
       <div className="bg-[#0A3288] h-screen">
@@ -73,7 +73,7 @@ function SingUp() {
                 to={"/comingSoon"}
                 class="mt-[35px] ml-[400px] py-2 px-4 bg-[#0A3288] text-white font-bold rounded w-[100px] text-center"
               >
-                Sing Up
+                Sign Up
               </Link>
             </form>
           </div>
@@ -83,4 +83,4 @@ function SingUp() {
   );
 }
 
-export default SingUp;
+export default SignUp;

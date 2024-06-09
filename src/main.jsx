@@ -4,7 +4,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.jsx";
 import Login from "./components/login.jsx";
-import SingUp from "./components/singUp.jsx";
+import SignUp from "./components/signUp.jsx";
 import BMI from "./components/bmi.jsx";
 import BMR from "./components/bmr.jsx";
 import ComingSoon from "./components/comingSoon.jsx";
@@ -21,8 +21,8 @@ const router = createBrowserRouter([
     element: <Login />,
   },
   {
-    path: "/singUp",
-    element: <SingUp />,
+    path: "/signUp",
+    element: <SignUp />,
   },
   {
     path: "/bmi",
