@@ -9,8 +9,8 @@ Mindful Eating Challenge /No Processed Foods Challenge/Low Carb Challenge / Meal
 function ChallengeSec() {
   return (
     <>
-      <div className="bg-blue-300 h-[600px]">
-        <div className="flex flex-row justify-evenly items-center font-semibold ">
+      <div className="bg-blue-300 sm:h-[600px] h-[1100px]">
+        <div className="flex sm:flex-row flex-col justify-evenly items-center font-semibold ">
           {/*box1 */}
           <div
             id="chooseBox"
