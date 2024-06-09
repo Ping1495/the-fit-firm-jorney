@@ -9,7 +9,7 @@ Mindful Eating Challenge /No Processed Foods Challenge/Low Carb Challenge / Meal
 function ChallengeSec() {
   return (
     <>
-      <div className="bg-blue-300 sm:h-[600px] h-[1100px]">
+      <div className="bg-blue-300 sm:h-[600px] h-[1100px]  sm:w-full  w-full">
         <div className="flex sm:flex-row flex-col justify-evenly items-center font-semibold ">
           {/*box1 */}
           <div
