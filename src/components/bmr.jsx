@@ -51,11 +51,11 @@ function BMR() {
               BMR & TDEE
             </p>
             <form>
-              <div className="block text-lg font-normal text-[#0A3288] mb-2 mt-7">
-                <p className="block text-lg font-normal text-[#0A3288] mb-2 mt-4">
+              <div className="block sm:text-lg text-base font-normal text-[#0A3288] mb-2 mt-7">
+                <p className="block sm:text-lg text-base font-normal text-[#0A3288] mb-2 mt-4">
                   Gender
                 </p>
-                <label className="mr-[50px] ml-[100px]">
+                <label className="mr-[50px] ml-[100px] ">
                   <input
                     type="radio"
                     name="sex"
@@ -79,7 +79,7 @@ function BMR() {
               <div>
                 <label
                   htmlFor="age"
-                  className="block text-lg font-normal text-[#0A3288] mb-2 mt-4"
+                  className="block sm:text-lg text-base font-normal text-[#0A3288] mb-2 mt-4"
                 >
                   Age
                 </label>
@@ -97,7 +97,7 @@ function BMR() {
               <div>
                 <label
                   htmlFor="height"
-                  className="block text-lg font-normal text-[#0A3288] mb-2 mt-4"
+                  className="block sm:text-lg text-base font-normal text-[#0A3288] mb-2 mt-4"
                 >
                   Height (cm)
                 </label>
@@ -114,7 +114,7 @@ function BMR() {
               <div>
                 <label
                   htmlFor="weight"
-                  className="block text-lg font-normal text-[#0A3288] mb-2 mt-4"
+                  className="block sm:text-lg text-base font-normal text-[#0A3288] mb-2 mt-4"
                 >
                   Weight (kg)
                 </label>
