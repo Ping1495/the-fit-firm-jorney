@@ -44,11 +44,11 @@ const ProtineCalculate = () => {
 
   return (
     <>
-      <div className="bg-blue-500 h-screen">
+      <div className="bg-blue-500 h-full sm:h-screen pb-9">
         <Header />
         <div className="flex justify-center mt-[50px] font-semibold">
-          <div className="bg-white h-[550px] w-[450px] rounded-3xl flex flex-col items-center">
-            <p className="text-3xl font-midium bg-[#0A3288] py-[20px] w-[450px] text-white text-center rounded-t-3xl">
+          <div className="bg-white sm:h-[550px] sm:w-[450px] h-full w-[350px] rounded-3xl flex flex-col items-center">
+            <p className="text-3xl font-midium bg-[#0A3288] py-[20px] sm:w-[450px] w-[350px] text-white text-center rounded-t-3xl">
               PROTEIN&nbsp;&nbsp;CALCULATOR
             </p>
             <form>
@@ -66,7 +66,7 @@ const ProtineCalculate = () => {
                   type="text"
                   id="weight"
                   name="weight"
-                  className="mt-1 p-2 border-2 border-[#0A3288] rounded w-[400px]"
+                  className="mt-1 p-2 border-2 border-[#0A3288] rounded sm:w-[350px] w-[320px]"
                 />
               </div>
               <div className="block text-lg font-normal text-[#0A3288] mt-4">
