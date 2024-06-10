@@ -44,7 +44,7 @@ const ProtineCalculate = () => {
 
   return (
     <>
-      <div className="bg-blue-500 h-full sm:h-screen pb-9">
+      <div className="bg-blue-500 h-[800px] sm:h-screen pb-9">
         <Header />
         <div className="flex justify-center mt-[50px] font-semibold">
           <div className="bg-white sm:h-[550px] sm:w-[450px] h-full w-[350px] rounded-3xl flex flex-col items-center">
