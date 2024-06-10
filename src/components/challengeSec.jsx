@@ -3,12 +3,12 @@ import RankPic from "/public/images/rank.png"; // Make sure the path to your ima
 
 function ChallengeSec() {
   return (
-    <div className="bg-blue-300 sm:h-[600px] h-[1150px] w-full">
+    <div className="bg-blue-300 sm:h-[600px] h-full pb-9 ">
       <div className="flex sm:flex-row flex-col justify-evenly items-center font-semibold">
         {/*box1 */}
         <div
           id="chooseBox"
-          className="bg-[#0A3288] h-auto sm:h-[480px] w-full max-w-[600px] rounded-3xl mt-[60px] p-4 sm:p-0"
+          className="bg-[#0A3288] h-auto sm:h-[480px]c rounded-3xl mt-[60px] p-4 sm:p-0"
         >
           <div className="flex flex-col items-center h-full">
             <p className="w-full bg-yellow-400 text-[#0A3288] px-1 py-5 text-center mb-9 rounded-t-3xl font-bold text-2xl sm:text-4xl">
@@ -30,7 +30,7 @@ function ChallengeSec() {
         {/*box2 */}
         <div
           id="resultBox"
-          className="bg-[#0A3288] h-auto sm:h-[480px] w-full max-w-[600px] rounded-3xl mt-[60px] p-4 sm:p-0 flex flex-col justify-between items-center text-white"
+          className="bg-[#0A3288] h-auto sm:h-[480px]  w-[350px] sm:w-[600px] rounded-3xl mt-[60px] p-4 sm:p-0 flex flex-col justify-between items-center text-white"
         >
           <div className="flex flex-col items-center w-full">
             <div className="flex flex-row items-center sm:items-start pt-9">
@@ -44,7 +44,7 @@ function ChallengeSec() {
               </p>
             </div>
 
-            <p className="mb-4 mt-4 text-white w-full sm:w-[400px] text-lg font-medium text-center sm:text-left">
+            <p className="mb-4 mt-4 text-white w-full sm:w-[400px] sm:text-lg text-base  sm:font-medium text-center sm:text-left font-normal">
               Join us in eliminating added sugars from your diet for a week. Say
               goodbye to sweets, sugary drinks, and processed foods with added
               sugars.
@@ -54,7 +54,7 @@ function ChallengeSec() {
               <p className="bg-yellow-400 text-[#0A3288] text-center font-bold">
                 Pros
               </p>
-              <ol className="pl-4">
+              <ol className="pl-4 sm:text-lg text-base font-normal">
                 <li>Stable energy levels</li>
                 <li>Weight control</li>
                 <li>Better mood and mental clarity</li>
