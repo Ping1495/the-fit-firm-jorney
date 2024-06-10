@@ -125,7 +125,7 @@ const ProtineCalculate = () => {
               </div>
             </div>
             <div>
-              <p className="text-[#0A3288] text-center text-sm w-[400px]">
+              <p className="text-[#0A3288] text-center text-sm sm:w-[400px] w-[320px] pb-2">
                 {message}
               </p>
             </div>
