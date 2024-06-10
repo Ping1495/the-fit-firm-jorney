@@ -46,8 +46,8 @@ function BMR() {
       <div className="bg-blue-500 h-full sm:h-screen pb-9">
         <Header />
         <div className="flex sm:flex-row flex-col justify-center items-center mt-[50px] font-semibold">
-          <div className="bg-white sm:h-[550px]  sm:w-[450px] h-full pb-9 w-[400px] rounded-3xl flex flex-col items-center">
-            <p className="text-3xl font-midium bg-[#0A3288] py-[20px] sm:w-[450px]  w-[400px] text-white text-center rounded-t-3xl">
+          <div className="bg-white sm:h-[550px]  sm:w-[450px] h-full pb-9 w-[350px] rounded-3xl flex flex-col items-center">
+            <p className="text-3xl font-midium bg-[#0A3288] py-[20px] sm:w-[450px]  w-[350px] text-white text-center rounded-t-3xl">
               BMR & TDEE
             </p>
             <form>
@@ -90,7 +90,7 @@ function BMR() {
                   type="text"
                   id="age"
                   name="age"
-                  className="mt-1 p-2 border-2 border-[#0A3288] rounded sm:w-[400px] w-[350px]"
+                  className="mt-1 p-2 border-2 border-[#0A3288] rounded sm:w-[400px] w-[320px]"
                 />
               </div>
 
@@ -108,7 +108,7 @@ function BMR() {
                   type="text"
                   id="height"
                   name="height"
-                  className="mt-1 p-2 border-2 border-[#0A3288] rounded sm:w-[400px] w-[350px]"
+                  className="mt-1 p-2 border-2 border-[#0A3288] rounded sm:w-[400px] w-[320px]"
                 />
               </div>
               <div>
@@ -125,19 +125,19 @@ function BMR() {
                   type="text"
                   id="weight"
                   name="weight"
-                  className="mt-1 p-2 border-2 border-[#0A3288] rounded sm:w-[400px] w-[350px]"
+                  className="mt-1 p-2 border-2 border-[#0A3288] rounded sm:w-[400px] w-[320px]"
                 />
               </div>
             </form>
           </div>
 
-          <div className="bg-white sm:h-[550px]  sm:w-[450px] h-full w-[400px] rounded-3xl flex flex-col items-center sm:ml-7 ml-0 sm:mt-0 mt-9 pb-2">
-            <p className="text-3xl font-midium bg-[#0A3288] py-[20px] sm:w-[450px]  w-[400px] text-white text-center rounded-t-3xl">
+          <div className="bg-white sm:h-[550px]  sm:w-[450px] h-full w-[350px] rounded-3xl flex flex-col items-center sm:ml-7 ml-0 sm:mt-0 mt-9 pb-2">
+            <p className="text-3xl font-midium bg-[#0A3288] py-[20px] sm:w-[450px]  w-[350px] text-white text-center rounded-t-3xl">
               CALCULATOR
             </p>
             <form>
-              <div className="block text-lg font-normal text-[#0A3288] mb-2 mt-4">
-                <p className="block text-lg font-normal text-[#0A3288] mb-2 mt-4">
+              <div className="block sm:text-lg text-base font-normal text-[#0A3288] mb-2 mt-4">
+                <p className="block sm:text-lg text-base font-normal text-[#0A3288] mb-2 mt-4">
                   Activity
                 </p>
                 <label className="">
@@ -219,11 +219,11 @@ function BMR() {
             </div>
 
             <div className=" text-base font-semibold text-[#0A3288] mt-1">
-              <p className="text-xs mt-5">
+              <p className="sm:text-xs text-[10px] mt-5">
                 *BMR is the number of calories your body needs to function at
                 rest.
               </p>
-              <p className="text-xs ">
+              <p className="sm:text-xs text-[10px] ">
                 *TDEE is the number of calories needed daily to maintain your
                 weight.
               </p>
