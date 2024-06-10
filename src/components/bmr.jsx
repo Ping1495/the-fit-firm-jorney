@@ -43,11 +43,11 @@ function BMR() {
 
   return (
     <>
-      <div className="bg-blue-500 h-screen">
+      <div className="bg-blue-500 h-full sm:h-screen pb-9">
         <Header />
-        <div className="flex justify-center mt-[50px] font-semibold">
-          <div className="bg-white h-[550px] w-[450px] rounded-3xl flex flex-col items-center">
-            <p className="text-3xl font-midium bg-[#0A3288] py-[20px] w-[450px] text-white text-center rounded-t-3xl">
+        <div className="flex sm:flex-row flex-col justify-center items-center mt-[50px] font-semibold">
+          <div className="bg-white sm:h-[550px]  sm:w-[450px] h-full pb-9 w-[400px] rounded-3xl flex flex-col items-center">
+            <p className="text-3xl font-midium bg-[#0A3288] py-[20px] sm:w-[450px]  w-[400px] text-white text-center rounded-t-3xl">
               BMR & TDEE
             </p>
             <form>
@@ -90,7 +90,7 @@ function BMR() {
                   type="text"
                   id="age"
                   name="age"
-                  className="mt-1 p-2 border-2 border-[#0A3288] rounded w-[400px]"
+                  className="mt-1 p-2 border-2 border-[#0A3288] rounded sm:w-[400px] w-[350px]"
                 />
               </div>
 
@@ -108,7 +108,7 @@ function BMR() {
                   type="text"
                   id="height"
                   name="height"
-                  className="mt-1 p-2 border-2 border-[#0A3288] rounded w-[400px]"
+                  className="mt-1 p-2 border-2 border-[#0A3288] rounded sm:w-[400px] w-[350px]"
                 />
               </div>
               <div>
@@ -125,14 +125,14 @@ function BMR() {
                   type="text"
                   id="weight"
                   name="weight"
-                  className="mt-1 p-2 border-2 border-[#0A3288] rounded w-[400px]"
+                  className="mt-1 p-2 border-2 border-[#0A3288] rounded sm:w-[400px] w-[350px]"
                 />
               </div>
             </form>
           </div>
 
-          <div className="bg-white h-[550px] w-[450px] rounded-3xl flex flex-col items-center ml-7">
-            <p className="text-3xl font-midium bg-[#0A3288] py-[20px] w-[450px] text-white text-center rounded-t-3xl">
+          <div className="bg-white sm:h-[550px]  sm:w-[450px] h-full w-[400px] rounded-3xl flex flex-col items-center sm:ml-7 ml-0 sm:mt-0 mt-9 pb-2">
+            <p className="text-3xl font-midium bg-[#0A3288] py-[20px] sm:w-[450px]  w-[400px] text-white text-center rounded-t-3xl">
               CALCULATOR
             </p>
             <form>
