@@ -79,14 +79,14 @@ function BMI() {
 
   return (
     <>
-      <div className="bg-blue-500 sm:h-screen w-auto  h-[800px]">
+      <div className="bg-blue-500 min-h-screen flex flex-col">
         <Header />
-        <div className="flex justify-center mt-[50px] font-semibold">
-          <div className="bg-white h-[550px]  sm:w-[450px] w-auto rounded-3xl flex flex-col items-center">
-            <p className="text-3xl font-midium bg-[#0A3288] py-[20px] w-[450px] text-white text-center rounded-t-3xl">
+        <div className="flex justify-center mt-12 flex-grow font-semibold px-4">
+          <div className="bg-white max-w-lg w-full rounded-3xl flex flex-col items-center">
+            <p className="text-3xl font-medium bg-[#0A3288] py-5 w-full text-white text-center rounded-t-3xl">
               BMI CALCULATOR
             </p>
-            <form>
+            <form className="w-full px-4">
               <div>
                 <label
                   htmlFor="height"
@@ -101,7 +101,7 @@ function BMI() {
                   type="text"
                   id="height"
                   name="height"
-                  className="mt-1 p-2 border-2 border-[#0A3288] rounded w-[400px]"
+                  className="mt-1 p-2 border-2 border-[#0A3288] rounded w-full"
                 />
               </div>
               <div>
@@ -118,28 +118,27 @@ function BMI() {
                   type="text"
                   id="weight"
                   name="weight"
-                  className="mt-1 p-2 border-2 border-[#0A3288] rounded w-[400px]"
+                  className="mt-1 p-2 border-2 border-[#0A3288] rounded w-full"
                 />
               </div>
             </form>
-            <div>
+            <div className="mt-6">
               <button
-                className="w-[250px] bg-[#0A3288] text-white text-[20px] font-semibold border border-white py-2 px-6 rounded-xl mb-[20px] mt-[30px]"
+                className="w-64 bg-[#0A3288] text-white text-2xl font-semibold border border-white py-2 px-6 rounded-xl mb-6"
                 onClick={handleCalculate}
               >
-                calculate your BMI
+                Calculate Your BMI
               </button>
             </div>
-            <div className="text-[#0A3288] mb-[15px] flex flex-col justify-center items-center">
-              <p className="text-xl font-midium ">Your BMI is</p>
-              <p className="text-3xl font-midium  py-2 px-2 mt-2 border-2 border-blue-500 rounded-xl">
+            <div className="text-[#0A3288] mb-6 flex flex-col justify-center items-center">
+              <p className="text-xl font-medium">Your BMI is</p>
+              <p className="text-3xl font-medium py-2 px-4 mt-2 border-2 border-blue-500 rounded-xl">
                 {bmi}
               </p>
             </div>
-
-            <div>
-              <p className="text-[#0A3288] text-center">
-                You are a {message} <br /> Your best weight is {bestMinWeight}
+            <div className="text-center text-[#0A3288] mb-6 px-4">
+              <p>
+                You are {message}. <br /> Your best weight is {bestMinWeight}
                 &nbsp;-&nbsp;
                 {bestMaxWeight} kg
               </p>
