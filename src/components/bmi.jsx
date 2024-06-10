@@ -79,10 +79,10 @@ function BMI() {
 
   return (
     <>
-      <div className="bg-blue-500 min-h-screen flex flex-col">
+      <div className="bg-blue-500 min-h-screen flex flex-col pb-9">
         <Header />
         <div className="flex justify-center mt-12 flex-grow font-semibold px-4">
-          <div className="bg-white max-w-lg w-full rounded-3xl flex flex-col items-center">
+          <div className="bg-white sm:h-[550px]  sm:w-[450px] h-[550px] w-[350px] rounded-3xl flex flex-col items-center">
             <p className="text-3xl font-medium bg-[#0A3288] py-5 w-full text-white text-center rounded-t-3xl">
               BMI CALCULATOR
             </p>
